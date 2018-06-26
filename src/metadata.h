@@ -79,7 +79,7 @@ inline std::ostream& operator<<(std::ostream& os, MetaName const & rhs) {os<<num
     ELTDOU(FDOUBLE     , ZOFF				, 0.0       ,   OriginZ                     ) SEP \
     ELTINT(int         , CLASS				, 0         ,   ClassNumber                 ) SEP \
     ELTDOU(FDOUBLE     , NORM				, 1.0       ,   NormCorrection              ) SEP \
-    ELTDOU(FDOUBLE     , SCALE				, 1.0       ,   ScaleCorrection             ) SEP \
+/*    ELTDOU(FDOUBLE     , SCALE				, 1.0       ,   ScaleCorrection             ) SEP */ \
     ELTDOU(FDOUBLE     , DLL				, 0.0       ,   LogLikeliContribution       ) SEP \
     ELTDOU(FDOUBLE     , PMAX				, 0.0       ,   MaxValueProbDistribution    ) SEP \
     ELTINT(int         , NR_SIGN			, 0         ,   NrOfSignificantSamples      ) SEP \
