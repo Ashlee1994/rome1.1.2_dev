@@ -79,7 +79,7 @@ inline std::ostream& operator<<(std::ostream& os, MetaName const & rhs) {os<<num
     ELTDOU(FDOUBLE     , ZOFF				, 0.0       ,   OriginZ                     ) SEP \
     ELTINT(int         , CLASS				, 0         ,   ClassNumber                 ) SEP \
     ELTDOU(FDOUBLE     , NORM				, 1.0       ,   NormCorrection              ) SEP \
-/*    ELTDOU(FDOUBLE     , SCALE				, 1.0       ,   ScaleCorrection             ) SEP */ \
+    ELTDOU(FDOUBLE     , SCALE				, 1.0       ,   ScaleCorrection             ) SEP \
     ELTDOU(FDOUBLE     , DLL				, 0.0       ,   LogLikeliContribution       ) SEP \
     ELTDOU(FDOUBLE     , PMAX				, 0.0       ,   MaxValueProbDistribution    ) SEP \
     ELTINT(int         , NR_SIGN			, 0         ,   NrOfSignificantSamples      ) SEP \
@@ -356,11 +356,20 @@ public:
         assert(MetaDataElemsName.size()==MetaDataElemsType.size());
         assert(MetaDataElemsType.size()==MetaDataElems.size());
         os << tableName <<std::endl<<std::endl<<"loop_"<<std::endl;
+		int ScaleCorrectionIndex = 0; // remove rlnScaleCorrection
         for (int i = 0; i < MetaDataElemsName.size(); i++) {
-            os << "_rln"<<MetaDataElemsName[i]<<" #"<<std::to_string((long long)i+1)<<std::endl;
+			if (MetaDataElemsName[i] == "ScaleCorrection") { // remove rlnScaleCorrection
+				ScaleCorrectionIndex = i;
+				continue;
+			}
+			else if (i > ScaleCorrectionIndex)
+				os << "_rln" << MetaDataElemsName[i] << " #" << std::to_string((long long)i) << std::endl;
+            else
+				os << "_rln"<<MetaDataElemsName[i]<<" #"<<std::to_string((long long)i+1)<<std::endl;
         }
         for (int metadataIndex = 0; metadataIndex < MetaDataElemsNumber; metadataIndex++) {
             for (int i = 0; i < MetaDataElems.size(); i++) {
+				if (i == ScaleCorrectionIndex)  continue;
                 switch (MetaDataElemsType[i]) {
                     case ElemTypeChar: {
                         auto string_ptr = (std::string**)MetaDataElems[i];
