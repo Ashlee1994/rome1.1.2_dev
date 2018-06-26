@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{987E41B8-BCC2-49DA-BF9C-787A2E27F9D7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>rome_map3d</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Intel C++ Compiler 18.0</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseIntelMKL>Sequential</UseIntelMKL>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Intel C++ Compiler 18.0</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseIntelMKL>Sequential</UseIntelMKL>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;COMMANDLINE;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;__attribute__(D)=;_HAS_ITERATOR_DEBUGGING=0;ROME_MAP3D;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OpenMP>GenerateParallelCode</OpenMP>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OffloadConstructs>None</OffloadConstructs>
+      <C99Support>false</C99Support>
+      <Cpp0xSupport>true</Cpp0xSupport>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeaderFile>util.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>mkl_intel_lp64_dll.lib;mkl_sequential_dll.lib;mkl_core_dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;COMMANDLINE;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;__attribute__(D)=;_HS_ITERATOR_DEBUGGING=0;ROME_MAP3D;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OpenMP>GenerateParallelCode</OpenMP>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OffloadConstructs>None</OffloadConstructs>
+      <C99Support>false</C99Support>
+      <Cpp0xSupport>true</Cpp0xSupport>
+      <OpenMPSupport>true</OpenMPSupport>
+      <ExceptionHandling>false</ExceptionHandling>
+      <UseProcessorExtensions>HOST</UseProcessorExtensions>
+      <OptimizationDiagnosticLevel>Level2</OptimizationDiagnosticLevel>
+      <OptimizationDiagnosticPhase>Vectorization</OptimizationDiagnosticPhase>
+      <InterproceduralOptimization>MultiFile</InterproceduralOptimization>
+      <PrecompiledHeaderFile>util.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>mkl_intel_lp64_dll.lib;mkl_sequential_dll.lib;mkl_core_dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\debug.cpp" />
+    <ClCompile Include="..\..\src\findBestPoints.cpp" />
+    <Text Include="..\..\src\findBestPoints.h" />
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Healpix_2.15a\arr.h" />
+    <ClInclude Include="..\..\Healpix_2.15a\cxxutils.h" />
+    <ClInclude Include="..\..\Healpix_2.15a\datatypes.h" />
+    <ClInclude Include="..\..\Healpix_2.15a\geom_utils.h" />
+    <ClInclude Include="..\..\Healpix_2.15a\healpix_base.h" />
+    <ClInclude Include="..\..\Healpix_2.15a\lsconstants.h" />
+    <ClInclude Include="..\..\Healpix_2.15a\message_error.h" />
+    <ClInclude Include="..\..\Healpix_2.15a\openmp_support.h" />
+    <ClInclude Include="..\..\Healpix_2.15a\pointing.h" />
+    <ClInclude Include="..\..\Healpix_2.15a\vec3.h" />
+    <ClInclude Include="..\..\src\array.h" />
+    <ClInclude Include="..\..\src\array_vector.h" />
+    <ClInclude Include="..\..\src\basis.h" />
+    <ClInclude Include="..\..\src\bessel.h" />
+    <ClInclude Include="..\..\src\checker.h" />
+    <ClInclude Include="..\..\src\ctf.h" />
+    <ClInclude Include="..\..\src\debug.h" />
+    <ClInclude Include="..\..\src\error.h" />
+    <ClInclude Include="..\..\src\exp_model.h" />
+    <ClInclude Include="..\..\src\exp_mweight.h" />
+    <ClInclude Include="..\..\src\exp_mweight_old.h" />
+    <ClInclude Include="..\..\src\fft_base.h" />
+    <ClInclude Include="..\..\src\fft_dfti.h" />
+    <ClInclude Include="..\..\src\fft_fftw3.h" />
+    <ClInclude Include="..\..\src\image.h" />
+    <ClInclude Include="..\..\src\imagePermutor.h" />
+    <ClInclude Include="..\..\src\initialize.h" />
+    <ClInclude Include="..\..\src\jpegEtc.h" />
+    <ClInclude Include="..\..\src\macros.h" />
+    <ClInclude Include="..\..\src\map3d_optimizer.h" />
+    <ClInclude Include="..\..\src\map3d_optimizer_kernel.h" />
+    <ClInclude Include="..\..\src\map3d_optimizer_new.h" />
+    <ClInclude Include="..\..\src\map3d_optimizer_old.h" />
+    <ClInclude Include="..\..\src\map_model.h" />
+    <ClInclude Include="..\..\src\map_optimizer_base_old.h" />
+    <ClInclude Include="..\..\src\math.h" />
+    <ClInclude Include="..\..\src\matrix.h" />
+    <ClInclude Include="..\..\src\memory.h" />
+    <ClInclude Include="..\..\src\metadata.h" />
+    <ClInclude Include="..\..\src\ml_model.h" />
+    <ClInclude Include="..\..\src\mpi.h" />
+    <ClInclude Include="..\..\src\mrcs.h" />
+    <ClInclude Include="..\..\src\option.h" />
+    <ClInclude Include="..\..\src\pca_optimizer.h" />
+    <ClInclude Include="..\..\src\peakFinder.h" />
+    <ClInclude Include="..\..\src\primitives_for_each_os.h" />
+    <ClInclude Include="..\..\src\progressbar.h" />
+    <ClInclude Include="..\..\src\reconstruct.h" />
+    <ClInclude Include="..\..\src\sampling.h" />
+    <ClInclude Include="..\..\src\simulatedata.h" />
+    <ClInclude Include="..\..\src\spider.h" />
+    <ClInclude Include="..\..\src\spider_old.h" />
+    <ClInclude Include="..\..\src\statusTracer.h" />
+    <ClInclude Include="..\..\src\string.h" />
+    <ClInclude Include="..\..\src\symmetries.h" />
+    <ClInclude Include="..\..\src\tandemExecution.h" />
+    <ClInclude Include="..\..\src\tandemExecution_phaseAlgorithms_shared_source_code.h" />
+    <ClInclude Include="..\..\src\time.h" />
+    <ClInclude Include="..\..\src\util.h" />
+    <ClInclude Include="..\..\src\util_heap_defs.h" />
+    <ClInclude Include="..\..\src\util_heap_undefs.h" />
+    <ClInclude Include="..\..\src\util_nocopy.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\apps\rome_map3d.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Healpix_2.15a\cxxutils.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Healpix_2.15a\healpix_base.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\array.cpp" />
+    <ClCompile Include="..\..\src\array_vector.cpp" />
+    <ClCompile Include="..\..\src\basis.cpp" />
+    <ClCompile Include="..\..\src\bessel.cpp" />
+    <ClCompile Include="..\..\src\checker.cpp" />
+    <ClCompile Include="..\..\src\ctf.cpp" />
+    <ClCompile Include="..\..\src\error.cpp" />
+    <ClCompile Include="..\..\src\exp_model.cpp" />
+    <ClCompile Include="..\..\src\exp_mweight.cpp" />
+    <ClCompile Include="..\..\src\exp_mweight_old.cpp" />
+    <ClCompile Include="..\..\src\fft_base.cpp" />
+    <ClCompile Include="..\..\src\fft_dfti.cpp" />
+    <ClCompile Include="..\..\src\fft_fftw3.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\image.cpp" />
+    <ClCompile Include="..\..\src\imagePermutor.cpp" />
+    <ClCompile Include="..\..\src\initialize.cpp" />
+    <ClCompile Include="..\..\src\jpegEtc.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map3d_optimizer.cpp" />
+    <ClCompile Include="..\..\src\map3d_optimizer_kernel.cpp" />
+    <ClCompile Include="..\..\src\map3d_optimizer_new.cpp" />
+    <ClCompile Include="..\..\src\map3d_optimizer_old.cpp" />
+    <ClCompile Include="..\..\src\map_model.cpp" />
+    <ClCompile Include="..\..\src\map_optimizer_base_old.cpp" />
+    <ClCompile Include="..\..\src\math.cpp" />
+    <ClCompile Include="..\..\src\matrix.cpp" />
+    <ClCompile Include="..\..\src\memory.cpp" />
+    <ClCompile Include="..\..\src\metadata.cpp" />
+    <ClCompile Include="..\..\src\ml_model.cpp" />
+    <ClCompile Include="..\..\src\mpi.cpp" />
+    <ClCompile Include="..\..\src\mrcs.cpp" />
+    <ClCompile Include="..\..\src\option.cpp" />
+    <ClCompile Include="..\..\src\pca_optimizer.cpp" />
+    <ClCompile Include="..\..\src\peakFinder.cpp" />
+    <ClCompile Include="..\..\src\progressbar.cpp" />
+    <ClCompile Include="..\..\src\reconstruct.cpp" />
+    <ClCompile Include="..\..\src\sampling.cpp" />
+    <ClCompile Include="..\..\src\simulatedata.cpp" />
+    <ClCompile Include="..\..\src\spider.cpp" />
+    <ClCompile Include="..\..\src\spider_old.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\statusTracer.cpp" />
+    <ClCompile Include="..\..\src\string.cpp" />
+    <ClCompile Include="..\..\src\symmetries.cpp" />
+    <ClCompile Include="..\..\src\tandemExecution.cpp" />
+    <ClCompile Include="..\..\src\time.cpp" />
+    <ClCompile Include="..\..\src\util.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\README" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

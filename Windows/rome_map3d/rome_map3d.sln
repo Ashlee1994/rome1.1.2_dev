@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rome_map3d", "rome_map3d.vcxproj", "{987E41B8-BCC2-49DA-BF9C-787A2E27F9D7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rome_map2d", "..\rome_map2d\rome_map2d.vcxproj", "{EB881FBD-80EF-4D23-9D70-8ADB575D4781}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MweightTest", "..\MweightTest\MweightTest.vcxproj", "{0AE74DD9-63A8-4A0F-8334-855A65EB41AD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CheckerTest", "..\CheckerTest\CheckerTest.vcxproj", "{479806B7-7785-48B0-A3FE-AFE2B9513D24}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PeakFinderTest", "..\PeakFinderTest\PeakFinderTest.vcxproj", "{BEEA6017-B1C8-4A87-BB9D-AE38655B1B45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{987E41B8-BCC2-49DA-BF9C-787A2E27F9D7}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
+		{987E41B8-BCC2-49DA-BF9C-787A2E27F9D7}.Debug|Mixed Platforms.Build.0 = Debug|x64
+		{987E41B8-BCC2-49DA-BF9C-787A2E27F9D7}.Debug|Win32.ActiveCfg = Debug|x64
+		{987E41B8-BCC2-49DA-BF9C-787A2E27F9D7}.Debug|x64.ActiveCfg = Debug|x64
+		{987E41B8-BCC2-49DA-BF9C-787A2E27F9D7}.Debug|x64.Build.0 = Debug|x64
+		{987E41B8-BCC2-49DA-BF9C-787A2E27F9D7}.Release|Mixed Platforms.ActiveCfg = Release|x64
+		{987E41B8-BCC2-49DA-BF9C-787A2E27F9D7}.Release|Mixed Platforms.Build.0 = Release|x64
+		{987E41B8-BCC2-49DA-BF9C-787A2E27F9D7}.Release|Win32.ActiveCfg = Release|x64
+		{987E41B8-BCC2-49DA-BF9C-787A2E27F9D7}.Release|x64.ActiveCfg = Release|x64
+		{987E41B8-BCC2-49DA-BF9C-787A2E27F9D7}.Release|x64.Build.0 = Release|x64
+		{EB881FBD-80EF-4D23-9D70-8ADB575D4781}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{EB881FBD-80EF-4D23-9D70-8ADB575D4781}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{EB881FBD-80EF-4D23-9D70-8ADB575D4781}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EB881FBD-80EF-4D23-9D70-8ADB575D4781}.Debug|Win32.Build.0 = Debug|Win32
+		{EB881FBD-80EF-4D23-9D70-8ADB575D4781}.Debug|x64.ActiveCfg = Debug|x64
+		{EB881FBD-80EF-4D23-9D70-8ADB575D4781}.Debug|x64.Build.0 = Debug|x64
+		{EB881FBD-80EF-4D23-9D70-8ADB575D4781}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{EB881FBD-80EF-4D23-9D70-8ADB575D4781}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{EB881FBD-80EF-4D23-9D70-8ADB575D4781}.Release|Win32.ActiveCfg = Release|Win32
+		{EB881FBD-80EF-4D23-9D70-8ADB575D4781}.Release|Win32.Build.0 = Release|Win32
+		{EB881FBD-80EF-4D23-9D70-8ADB575D4781}.Release|x64.ActiveCfg = Release|x64
+		{EB881FBD-80EF-4D23-9D70-8ADB575D4781}.Release|x64.Build.0 = Release|x64
+		{0AE74DD9-63A8-4A0F-8334-855A65EB41AD}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{0AE74DD9-63A8-4A0F-8334-855A65EB41AD}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{0AE74DD9-63A8-4A0F-8334-855A65EB41AD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0AE74DD9-63A8-4A0F-8334-855A65EB41AD}.Debug|Win32.Build.0 = Debug|Win32
+		{0AE74DD9-63A8-4A0F-8334-855A65EB41AD}.Debug|x64.ActiveCfg = Debug|x64
+		{0AE74DD9-63A8-4A0F-8334-855A65EB41AD}.Debug|x64.Build.0 = Debug|x64
+		{0AE74DD9-63A8-4A0F-8334-855A65EB41AD}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{0AE74DD9-63A8-4A0F-8334-855A65EB41AD}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{0AE74DD9-63A8-4A0F-8334-855A65EB41AD}.Release|Win32.ActiveCfg = Release|Win32
+		{0AE74DD9-63A8-4A0F-8334-855A65EB41AD}.Release|Win32.Build.0 = Release|Win32
+		{0AE74DD9-63A8-4A0F-8334-855A65EB41AD}.Release|x64.ActiveCfg = Release|x64
+		{0AE74DD9-63A8-4A0F-8334-855A65EB41AD}.Release|x64.Build.0 = Release|x64
+		{479806B7-7785-48B0-A3FE-AFE2B9513D24}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{479806B7-7785-48B0-A3FE-AFE2B9513D24}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{479806B7-7785-48B0-A3FE-AFE2B9513D24}.Debug|Win32.ActiveCfg = Debug|Win32
+		{479806B7-7785-48B0-A3FE-AFE2B9513D24}.Debug|Win32.Build.0 = Debug|Win32
+		{479806B7-7785-48B0-A3FE-AFE2B9513D24}.Debug|x64.ActiveCfg = Debug|x64
+		{479806B7-7785-48B0-A3FE-AFE2B9513D24}.Debug|x64.Build.0 = Debug|x64
+		{479806B7-7785-48B0-A3FE-AFE2B9513D24}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{479806B7-7785-48B0-A3FE-AFE2B9513D24}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{479806B7-7785-48B0-A3FE-AFE2B9513D24}.Release|Win32.ActiveCfg = Release|Win32
+		{479806B7-7785-48B0-A3FE-AFE2B9513D24}.Release|Win32.Build.0 = Release|Win32
+		{479806B7-7785-48B0-A3FE-AFE2B9513D24}.Release|x64.ActiveCfg = Release|x64
+		{479806B7-7785-48B0-A3FE-AFE2B9513D24}.Release|x64.Build.0 = Release|x64
+		{BEEA6017-B1C8-4A87-BB9D-AE38655B1B45}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{BEEA6017-B1C8-4A87-BB9D-AE38655B1B45}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{BEEA6017-B1C8-4A87-BB9D-AE38655B1B45}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BEEA6017-B1C8-4A87-BB9D-AE38655B1B45}.Debug|Win32.Build.0 = Debug|Win32
+		{BEEA6017-B1C8-4A87-BB9D-AE38655B1B45}.Debug|x64.ActiveCfg = Debug|x64
+		{BEEA6017-B1C8-4A87-BB9D-AE38655B1B45}.Debug|x64.Build.0 = Debug|x64
+		{BEEA6017-B1C8-4A87-BB9D-AE38655B1B45}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{BEEA6017-B1C8-4A87-BB9D-AE38655B1B45}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{BEEA6017-B1C8-4A87-BB9D-AE38655B1B45}.Release|Win32.ActiveCfg = Release|Win32
+		{BEEA6017-B1C8-4A87-BB9D-AE38655B1B45}.Release|Win32.Build.0 = Release|Win32
+		{BEEA6017-B1C8-4A87-BB9D-AE38655B1B45}.Release|x64.ActiveCfg = Release|x64
+		{BEEA6017-B1C8-4A87-BB9D-AE38655B1B45}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
