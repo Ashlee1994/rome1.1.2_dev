@@ -541,7 +541,7 @@ void iterate()
 #endif
         
         NODE0ONLY{
-        	if(guidance_fn!= "NULL")
+        	if(guidance_fn!= "NULL" && guidance_fn != "BACK")
                 statusTracer.checkStatus(guidance_fn+"_iter"+num2str(iter));
         }
 		// Write output files
@@ -552,7 +552,8 @@ void iterate()
                 std::string fn_metadata = write_path+write_fn+"_iter"+iterStr;
                 writeClassesAndMetadata(fn_class,fn_metadata);
                 std::string statusFn = write_path+write_fn+"_iter"+iterStr;
-                statusTracer.backupStatus(statusFn);
+				if (guidance_fn == "BACK")
+					statusTracer.backupStatus(statusFn);
             }
         }
         // update the metadata,free exp_metadata and exp_image_data
