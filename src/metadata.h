@@ -358,7 +358,7 @@ public:
         os << tableName <<std::endl<<std::endl<<"loop_"<<std::endl;
 		int ScaleCorrectionIndex = 0; // remove rlnScaleCorrection
         for (int i = 0; i < MetaDataElemsName.size(); i++) {
-			if (MetaDataElemsName[i] == "ScaleCorrection") { // remove rlnScaleCorrection
+			if (MetaDataElemsName[i].compare("ScaleCorrection") == 0 ) { // remove rlnScaleCorrection
 				ScaleCorrectionIndex = i;
 				continue;
 			}
